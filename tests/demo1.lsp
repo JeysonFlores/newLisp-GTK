@@ -3,8 +3,10 @@
 (when (not Gtk)
   (load "src/gtk3.lsp"))
 
+
 (new Tree 'state)
 (new Tree 'signals)
+
 
 (define (on-app)
   (Gtk:window-new "win" "demo" "Gtk demo" 600 400)
