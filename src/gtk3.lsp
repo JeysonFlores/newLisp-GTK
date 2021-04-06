@@ -21,4 +21,14 @@
 (define (Gtk:show-all widget)
   (ffi:widget-show-all (MAIN:state widget)))
 
+
+(define (Gtk:builder-new buildername)
+  (MAIN:state buildername (ffi:builder-new)))
+
+(define (Gtk:builder-add-from-file buildername file)
+  (ffi:builder-add-from-file (MAIN:state buildername) file 0))
+
+(define (Gtk:builder-get-object builder object widget)
+  (MAIN:state widget (ffi:builder-get-object (MAIN:state builder) object)))
+
 (context MAIN)
