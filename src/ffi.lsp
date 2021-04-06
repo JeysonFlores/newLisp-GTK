@@ -19,6 +19,10 @@
 (import gtk3 "gtk_builder_add_from_file")
 (import gtk3 "gtk_builder_get_object")
 
+(import gtk3 "gtk_css_provider_new")
+(import gtk3 "gtk_css_provider_load_from_file")
+(import gtk3 "gtk_style_context_add_provider_for_screen")
+
 ;; Application
 
 (define (ffi:application-new id flags)
@@ -67,5 +71,16 @@
 
 (define (ffi:builder-get-object builder object)
   (gtk_builder_get_object  builder object))
+
+;; CSS Provider
+
+(define (ffi:css-provider-new)
+  (gtk_css_provider_new))
+
+(define (ffi:builder-add-from-file builder file error)
+  (gtk_builder_add_from_file builder file error))
+
+(define (ffi:style-context-add_provider-for-screen screen provider priority)
+  (gtk_style_context_add_provider_for_screen screen provider priority))
 
 (context MAIN)
