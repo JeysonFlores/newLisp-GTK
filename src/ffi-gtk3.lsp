@@ -49,6 +49,7 @@
 (import gtk3 "gtk_css_provider_new")
 (import gtk3 "gtk_css_provider_load_from_file")
 (import gtk3 "gtk_style_context_add_provider_for_screen")
+
 ;; Application
 
 (define (ffi:application-new id flags)
