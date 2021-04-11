@@ -1,5 +1,5 @@
 (when (not ffi)
-  (load "src/ffi.lsp"))
+  (load "src/ffi-gtk3.lsp"))
 
 (context 'Gtk)
 

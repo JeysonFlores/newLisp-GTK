@@ -3,6 +3,13 @@
 (set 'gtk3 "libgtk-3.so.0")
 
 (import gtk3 "gtk_application_new")
+(import gtk3 "gtk_application_add_window")
+(import gtk3 "gtk_application_remove_window")
+(import gtk3 "gtk_application_get_windows")
+(import gtk3 "gtk_application_get_window_by_id")
+(import gtk3 "gtk_application_get_active_window")
+(import gtk3 "gtk_application_prefers_app_menu")
+
 (import gtk3 "gtk_application_window_new")
 
 (import gtk3 "gtk_window_set_title")
@@ -23,10 +30,29 @@
 (import gtk3 "gtk_css_provider_load_from_file")
 (import gtk3 "gtk_style_context_add_provider_for_screen")
 
+
 ;; Application
 
 (define (ffi:application-new id flags)
   (gtk_application_new id flags))
+
+(define (ffi:application-add-window app window)
+  (gtk_application_add_window app window))
+
+(define (ffi:application-remove-window app window)
+  (gtk_application_remove_window app window))
+
+(define (ffi:application-get-windows app)
+  (gtk_application_get_windows app))
+
+(define (ffi:application-get-window-by-id id)
+  (gtk_application_get_window_by_id id))
+
+(define (ffi:application-get-active-window app)
+  (gtk_application_get_active_window app))
+
+(define (ffi:application-prefers-app-menu app)
+  (gtk_application_prefers_app_menu app))
 
 ;; Window
 
