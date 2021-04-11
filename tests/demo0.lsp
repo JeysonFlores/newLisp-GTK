@@ -1,7 +1,7 @@
 #!/usr/bin/env newlisp
 
-;; Demo 2
-;; Creates an application, loads a Glade UI file and retrieves the main window to show it.
+;; Demo 0
+;; Creates an image.
 
 (when (not Gtk)
   (load "src/gtk3.lsp"))
@@ -12,10 +12,8 @@
 
 
 (define (on-app)
-  (Gtk:builder-new "builder")
-  (Gtk:builder-add-from-file "builder" "/home/jeyson/Descargas/PureX2.glade")
   (Gtk:window-new "win" "demo" "Gtk demo" 600 400)
-  (Gtk:builder-get-object "builder" "window_main" "win")
+  (Gtk:image-new "image" "audio-volume-high" 1)
   (Gtk:show-all "win"))
 
 (define (main)

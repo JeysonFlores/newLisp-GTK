@@ -35,6 +35,8 @@
 (import gtk3 "gtk_widget_show_all")
 (import gtk3 "gtk_widget_destroy")
 
+(import gtk3 "gtk_image_new_from_icon_name")
+
 (import gtk3 "g_application_run")
 (import gtk3 "g_object_ref")
 (import gtk3 "g_object_unref")
@@ -47,7 +49,6 @@
 (import gtk3 "gtk_css_provider_new")
 (import gtk3 "gtk_css_provider_load_from_file")
 (import gtk3 "gtk_style_context_add_provider_for_screen")
-
 ;; Application
 
 (define (ffi:application-new id flags)
@@ -145,6 +146,11 @@
 
 (define (ffi:application-run application argc argv)
   (g_application_run application argc argv))
+
+;; Image
+
+(define (ffi:new-image-from-name name size)
+  (gtk_image_new_from_icon_name name size))
 
 ;; GTK-Misc
 

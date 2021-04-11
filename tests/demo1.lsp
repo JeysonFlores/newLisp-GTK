@@ -1,4 +1,7 @@
-#!/usr/bin/env newlisp
+#!/usr/bin/env newlisp+
+
+;; Demo 1
+;; Creates an application, an applicationWindow and shows it.
 
 (when (not Gtk)
   (load "src/gtk3.lsp"))
