@@ -40,7 +40,7 @@
 
 ;; Image
 
-(define (Gtk:image-new widget name size)
+(define (Gtk:image-new-from-name widget name size)
   (MAIN:state widget (ffi:new-image-from-name name size)))
 
 (context MAIN)
