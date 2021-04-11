@@ -11,9 +11,27 @@
 (import gtk3 "gtk_application_prefers_app_menu")
 
 (import gtk3 "gtk_application_window_new")
+(import gtk3 "gtk_application_window_set_show_menubar")
+(import gtk3 "gtk_application_window_get_show_menubar")
+(import gtk3 "gtk_application_window_get_id")
+(import gtk3 "gtk_application_window_set_help_overlay")
+(import gtk3 "gtk_application_window_get_help_overlay")
 
+(import gtk3 "gtk_window_new")
 (import gtk3 "gtk_window_set_title")
+(import gtk3 "gtk_window_set_resizable")
+(import gtk3 "gtk_window_get_resizable")
+(import gtk3 "gtk_window_add_accel_group")
+(import gkt3 "gtk_window_remove_accel_group")
 (import gtk3 "gtk_window_set_default_size")
+(import gtk3 "gtk_window_activate_focus")
+(import gtk3 "gtk_window_activate_default")
+(import gtk3 "gtk_window_set_modal")
+(import gkt3 "gtk_window_set_default_geometry")
+(import gtk3 "gtk_window_set_position")
+(import gtk3 "gtk_window_set_transient_for")
+(import gtk3 "gtk_window_set_attached_to")
+
 (import gtk3 "gtk_widget_show_all")
 (import gtk3 "gtk_widget_destroy")
 
@@ -29,7 +47,6 @@
 (import gtk3 "gtk_css_provider_new")
 (import gtk3 "gtk_css_provider_load_from_file")
 (import gtk3 "gtk_style_context_add_provider_for_screen")
-
 
 ;; Application
 
@@ -54,16 +71,69 @@
 (define (ffi:application-prefers-app-menu app)
   (gtk_application_prefers_app_menu app))
 
-;; Window
+;; Application Window
 
 (define (ffi:application-window-new app)
   (gtk_application_window_new app))
 
+(define (ffi:application-window-set-show-menubar window show_menubar)
+  (gtk_application_window_set_show_menubar window show_menubar))
+
+(define (ffi:application-window-get-show-menubar window)
+  (gtk_application_window_get_show_menubar window))
+
+(define (ffi:application-window-get-id window)
+  (gtk_application_window_get_id window))
+
+(define (ffi:application-window-set-help-overlay window help_overlay)
+  (gtk_application_window_set_help_overlay window help_overlay))
+
+(define (ffi:application-window-get-help-overlay window)
+  (gtk_application_window_get_help_overlay window))
+
+;; Window
+
+(define (ffi:window-new)
+  (gtk_window_new))
+
 (define (ffi:window-set-title window title)
   (gtk_window_set_title window title))
 
+(define (ffi:window-set-resizable window resizable)
+  (gtk_window_set_resizable window resizable))
+
+(define (ffi:window-get-resizable window)
+  (gtk_window_get_resizable window))
+
+(define (ffi:window-add-accel-group window accel_group)
+  (gtk_window_add_accel_group window accel_group))
+
+(define (ffi:window-remove-accel-group window accel_group)
+  (gtk_window_remove_accel_group window accel_group))
+
+(define (ffi:window-activate-focus window)
+  (gtk_window_activate_focus window))
+
+(define (ffi:window-activate-default window)
+  (gtk_window_activate_default window))
+
+(define (ffi:window-set-modal window modal)
+  (gtk_window_set_modal window modal))
+
 (define (ffi:window-set-default-size window width height)
   (gtk_window_set_default_size window width height))
+
+(define (ffi:window-set-default-geometry window width height)
+  (gtk_window_set_default_geometry width height))
+
+(define (ffi:window-set-position window position)
+  (gtk_window_set_position window position))
+
+(define (ffi:window-set-transient-for window parent)
+  (gtk_window_set_transient_for window parent))
+
+(define (ffi:window-set-attached-to window attach_widget)
+  (gtk_window_set_attached_to window attach_widget))
 
 ;; Widget
 
