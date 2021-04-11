@@ -12,7 +12,7 @@
 
 
 (define (on-app)
-  (Gtk:window-new "win" "demo" "Gtk demo" 600 400)
+  (Gtk:window-new "win" "demo" "Gtk demo 1" 600 400)
   (Gtk:show-all "win"))
 
 (define (main)
