@@ -17,7 +17,7 @@
   (Gtk:show-all "win"))
 
 (define (main)
-  (Gtk:application-new "demo" "on-app")
+  (Gtk:application-new "demo" "com.github.jeyson.demo0" "on-app")
   (Gtk:run "demo")
   (Gtk:unref "demo")
   (state)

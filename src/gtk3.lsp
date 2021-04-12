@@ -5,8 +5,8 @@
 
 ;; Application
 
-(define (Gtk:application-new app cb)
-  (MAIN:state app (ffi:application-new 0 0))
+(define (Gtk:application-new app id cb)
+  (MAIN:state app (ffi:application-new id 0))
   (ffi:signal-connect-data (MAIN:state app) "activate" (MAIN:signals cb) 0 0 0))
 
 (define (Gtk:run app)
