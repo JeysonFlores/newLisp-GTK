@@ -11,7 +11,7 @@
 (new Tree 'signals)
 
 (define (print-hello-world)
-  (print "hello world!\n"))
+  (println "hello world!"))
 
 (define (on-app)
   (Gtk:window-new "win" "demo" "Gtk demo 3" 600 400)
