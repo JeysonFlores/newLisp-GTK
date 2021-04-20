@@ -1,4 +1,4 @@
-#!/usr/bin/env newlisp+
+#!/usr/bin/env newlisp
 
 ;; Demo 1
 ;; Creates an application, an applicationWindow and shows it.

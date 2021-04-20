@@ -20,6 +20,9 @@
 (define (Gtk:button-new-with-label buttonname label)
   (MAIN:state buttonname (ffi:button-new-with-label label)))
 
+(define (Gtk:button-set-label buttonname label)
+  (ffi:button-set-label (MAIN:state buttonname) label))
+
 ;; Container
 
 (define (Gtk:container-add container widget)
