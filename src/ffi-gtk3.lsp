@@ -18,7 +18,9 @@
 (import gtk3 "gtk_application_window_get_help_overlay")
 
 (import gtk3 "gtk_button_new")
-
+(import gtk3 "gtk_button_new_with_label")
+(import gtk3 "gtk_button_set_label")
+(import gtk3 "gtk_button_get_label")
 
 
 (import gtk3 "gtk_window_new")
@@ -99,8 +101,17 @@
 
 ;; Button
 
-(define (ffi:gtk-button-new)
+(define (ffi:button-new)
   (gtk_button_new))
+
+(define (ffi:button-new-with-label label)
+  (gtk_button_new_with_label label))
+
+(define (ffi:button-set-label button label)
+  (gtk_button_set_label button label))
+
+(define (ffi:button-get-label button)
+  (gtk_button_get_label button))
 
 ;; Window
 
