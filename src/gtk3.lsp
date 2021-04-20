@@ -12,6 +12,19 @@
 (define (Gtk:run app)
   (ffi:application-run (MAIN:state app) 0 0))
 
+;; Button
+
+(define (Gtk:button-new buttonname)
+  (MAIN:state buttonname (ffi:button-new)))
+
+(define (Gtk:button-new-with-label buttonname label)
+  (MAIN:state buttonname (ffi:button-new-with-label label)))
+
+;; Container
+
+(define (Gtk:container-add container widget)
+  (ffi:container-add (MAIN:state container) (MAIN:state widget)))
+
 ;; GTK-Misc
 
 (define (Gtk:unref object)

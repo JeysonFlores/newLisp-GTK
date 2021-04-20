@@ -22,6 +22,8 @@
 (import gtk3 "gtk_button_set_label")
 (import gtk3 "gtk_button_get_label")
 
+(import gtk3 "gtk_container_add")
+
 
 (import gtk3 "gtk_window_new")
 (import gtk3 "gtk_window_set_title")
@@ -112,6 +114,11 @@
 
 (define (ffi:button-get-label button)
   (gtk_button_get_label button))
+
+;; Container
+
+(define (ffi:container-add container widget)
+  (gtk_container_add container widget))
 
 ;; Window
 
