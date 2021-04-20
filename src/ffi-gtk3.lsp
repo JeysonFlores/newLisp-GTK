@@ -17,6 +17,10 @@
 (import gtk3 "gtk_application_window_set_help_overlay")
 (import gtk3 "gtk_application_window_get_help_overlay")
 
+(import gtk3 "gtk_button_new")
+
+
+
 (import gtk3 "gtk_window_new")
 (import gtk3 "gtk_window_set_title")
 (import gtk3 "gtk_window_set_resizable")
@@ -92,6 +96,11 @@
 
 (define (ffi:application-window-get-help-overlay window)
   (gtk_application_window_get_help_overlay window))
+
+;; Button
+
+(define (ffi:gtk-button-new)
+  (gtk_button_new))
 
 ;; Window
 
