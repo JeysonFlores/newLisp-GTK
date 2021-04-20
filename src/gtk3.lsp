@@ -33,6 +33,9 @@
 (define (Gtk:show-all widget)
   (ffi:widget-show-all (MAIN:state widget)))
 
+(define (Gtk:signal-connect instance detailed-signal c-handler data destroy-data connect-flags)
+  (ffi:signal-connect-data (MAIN:state instance) detailed-signal (MAIN:signals c-handler) data destroy-data connect-flags))
+
 ;; Window
 
 (define (Gtk:window-new window app title width height)
