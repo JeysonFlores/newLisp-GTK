@@ -8,7 +8,7 @@ Just copy the files in src/ into your lib/ folder or wherever you want.
 
 # Demo
 This API might change soon but here's a hello world example
-```newLisp 
+```Lisp 
  #!/usr/bin/env newlisp
 
 (when (not Gtk)
