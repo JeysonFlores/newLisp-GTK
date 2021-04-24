@@ -12,7 +12,7 @@
 (new Tree 'signals)
 
 (define (increase-counter)
-  (set'counter (+ counter 1))
+  (set 'counter (+ counter 1))
   (Gtk:button-set-label "hellobutton" (string "counter val is " counter )))
 
 (define (on-app)
