@@ -13,7 +13,8 @@
 
 (define (on-app)
   (Gtk:window-new "win" "demo" "Gtk demo 0" 600 400)
-  (Gtk:image-new-from-name "image" "audio-volume-high" 1)
+  (Gtk:image-new-from-name "image" "audio-volume-high" 6)
+  (Gtk:container-add "win" "image")
   (Gtk:show-all "win"))
 
 (define (main)
