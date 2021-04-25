@@ -13,7 +13,9 @@
 
 (define (on-app)
   (Gtk:builder-new "builder")
+  (println "1")
   (Gtk:builder-add-from-file "builder" "/home/jeyson/Descargas/PureX2.glade")
+  (println "2")
   (Gtk:window-new "win" "demo" "Gtk demo 2" 600 400)
   (Gtk:builder-get-object "builder" "window_main" "win")
   (Gtk:show-all "win"))
@@ -22,7 +24,6 @@
   (Gtk:application-new "demo" "com.github.jeyson.demo2" "on-app")
   (Gtk:run "demo")
   (Gtk:unref "demo")
-  (state)
   (exit))
 
 (signals "on-app"          (callback 0 'on-app))

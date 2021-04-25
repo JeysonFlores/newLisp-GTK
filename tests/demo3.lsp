@@ -24,7 +24,6 @@
   (Gtk:application-new "demo" "com.github.jeyson.demo3" "on-app")
   (Gtk:run "demo")
   (Gtk:unref "demo")
-  (state)
   (exit))
 
 (signals "on-app"            (callback 0 'on-app))
