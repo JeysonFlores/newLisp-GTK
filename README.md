@@ -7,7 +7,7 @@ A set of  custom GTK bindings for newLisp.
 Just copy the files in src/ into your lib/ folder or wherever you want.
 
 # Demo
-This API might change soon but here's a hello world example
+This API might change soon but here's a basic example:
 ```Scheme 
  #!/usr/bin/env newlisp
 
